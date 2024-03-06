@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Storage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/CustomBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:title="Storage Data"
+        app:titleTextColor="#026939" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_below="@id/bar"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/inputnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_below="@id/ED"
+            android:padding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BYTES"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/txtbyte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#026939"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KB"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/txtkb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#026939"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MB"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/txtmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#026939"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GB"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/txtgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#026939"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TB"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/txttb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#026939"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnprocess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/hope"
+
+        android:backgroundTint="#026939"
+        android:padding="15dp"
+        android:text="Hitung"
+        android:textColor="@color/white" />
+</RelativeLayout>
